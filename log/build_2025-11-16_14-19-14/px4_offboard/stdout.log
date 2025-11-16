@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO
+writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt
+writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt
+writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt
+writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt
+reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+running build
+running build_py
+copying px4_offboard/velocity_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/offboard_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/__init__.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+copying px4_offboard/circle_offboard.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+running install
+running install_lib
+running install_data
+copying resource/px4_offboard -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/ament_index/resource_index/packages

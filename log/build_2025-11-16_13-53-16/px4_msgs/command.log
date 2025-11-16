@@ -1,0 +1,4 @@
+Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_msgs': /usr/bin/cmake /home/jacob/offb/offboard_ladder/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/jacob/offb/offboard_ladder/install/px4_msgs
+Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_msgs' returned '0': /usr/bin/cmake /home/jacob/offb/offboard_ladder/src/px4_msgs -DCMAKE_INSTALL_PREFIX=/home/jacob/offb/offboard_ladder/install/px4_msgs
+Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_msgs': /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_msgs -- -j12 -l12
+Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_msgs' returned '-2': /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_msgs -- -j12 -l12

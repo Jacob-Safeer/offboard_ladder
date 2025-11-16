@@ -14,5 +14,6 @@
         "/home/jacob/ros2_px4_offboard_example_ws/install/px4_msgs/local/lib/python3.10/dist-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+    ],
+    "cmake.sourceDirectory": "/home/jacob/offb/offboard_ladder/src/px4_msgs"
 }

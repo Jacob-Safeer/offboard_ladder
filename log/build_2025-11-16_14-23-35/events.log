@@ -1,0 +1,344 @@
+[0.000000] (-) TimerEvent: {}
+[0.000148] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000312] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000480] (px4_offboard) JobQueued: {'identifier': 'px4_offboard', 'dependencies': OrderedDict([('px4_msgs', '/home/jacob/offb/offboard_ladder/install/px4_msgs')])}
+[0.000930] (px4_offboard) JobStarted: {'identifier': 'px4_offboard'}
+[0.099932] (-) TimerEvent: {}
+[0.200213] (-) TimerEvent: {}
+[0.300542] (-) TimerEvent: {}
+[0.400826] (-) TimerEvent: {}
+[0.501190] (-) TimerEvent: {}
+[0.601454] (-) TimerEvent: {}
+[0.701871] (-) TimerEvent: {}
+[0.802216] (-) TimerEvent: {}
+[0.902717] (-) TimerEvent: {}
+[1.003102] (-) TimerEvent: {}
+[1.103598] (-) TimerEvent: {}
+[1.204171] (-) TimerEvent: {}
+[1.304618] (-) TimerEvent: {}
+[1.405027] (-) TimerEvent: {}
+[1.505435] (-) TimerEvent: {}
+[1.605995] (-) TimerEvent: {}
+[1.706529] (-) TimerEvent: {}
+[1.807040] (-) TimerEvent: {}
+[1.907593] (-) TimerEvent: {}
+[2.008100] (-) TimerEvent: {}
+[2.108668] (-) TimerEvent: {}
+[2.209240] (-) TimerEvent: {}
+[2.309768] (-) TimerEvent: {}
+[2.410219] (-) TimerEvent: {}
+[2.510681] (-) TimerEvent: {}
+[2.611142] (-) TimerEvent: {}
+[2.711622] (-) TimerEvent: {}
+[2.812021] (-) TimerEvent: {}
+[2.912400] (-) TimerEvent: {}
+[3.012789] (-) TimerEvent: {}
+[3.113125] (-) TimerEvent: {}
+[3.213591] (-) TimerEvent: {}
+[3.314041] (-) TimerEvent: {}
+[3.414415] (-) TimerEvent: {}
+[3.514757] (-) TimerEvent: {}
+[3.615103] (-) TimerEvent: {}
+[3.715494] (-) TimerEvent: {}
+[3.815838] (-) TimerEvent: {}
+[3.916241] (-) TimerEvent: {}
+[4.016630] (-) TimerEvent: {}
+[4.117049] (-) TimerEvent: {}
+[4.217454] (-) TimerEvent: {}
+[4.317894] (-) TimerEvent: {}
+[4.418648] (-) TimerEvent: {}
+[4.519098] (-) TimerEvent: {}
+[4.619475] (-) TimerEvent: {}
+[4.719756] (-) TimerEvent: {}
+[4.820133] (-) TimerEvent: {}
+[4.920527] (-) TimerEvent: {}
+[5.020946] (-) TimerEvent: {}
+[5.121392] (-) TimerEvent: {}
+[5.221944] (-) TimerEvent: {}
+[5.322527] (-) TimerEvent: {}
+[5.423070] (-) TimerEvent: {}
+[5.523666] (-) TimerEvent: {}
+[5.624225] (-) TimerEvent: {}
+[5.724693] (-) TimerEvent: {}
+[5.825034] (-) TimerEvent: {}
+[5.925396] (-) TimerEvent: {}
+[6.025893] (-) TimerEvent: {}
+[6.126318] (-) TimerEvent: {}
+[6.226693] (-) TimerEvent: {}
+[6.327110] (-) TimerEvent: {}
+[6.427581] (-) TimerEvent: {}
+[6.527853] (-) TimerEvent: {}
+[6.628220] (-) TimerEvent: {}
+[6.728623] (-) TimerEvent: {}
+[6.828954] (-) TimerEvent: {}
+[6.929223] (-) TimerEvent: {}
+[7.029464] (-) TimerEvent: {}
+[7.129657] (-) TimerEvent: {}
+[7.229992] (-) TimerEvent: {}
+[7.330331] (-) TimerEvent: {}
+[7.430665] (-) TimerEvent: {}
+[7.531000] (-) TimerEvent: {}
+[7.631391] (-) TimerEvent: {}
+[7.731853] (-) TimerEvent: {}
+[7.832299] (-) TimerEvent: {}
+[7.932611] (-) TimerEvent: {}
+[8.032886] (-) TimerEvent: {}
+[8.133150] (-) TimerEvent: {}
+[8.233560] (-) TimerEvent: {}
+[8.334001] (-) TimerEvent: {}
+[8.434478] (-) TimerEvent: {}
+[8.534938] (-) TimerEvent: {}
+[8.635440] (-) TimerEvent: {}
+[8.735972] (-) TimerEvent: {}
+[8.836423] (-) TimerEvent: {}
+[8.936750] (-) TimerEvent: {}
+[9.036954] (-) TimerEvent: {}
+[9.137241] (-) TimerEvent: {}
+[9.237437] (-) TimerEvent: {}
+[9.337668] (-) TimerEvent: {}
+[9.437958] (-) TimerEvent: {}
+[9.538180] (-) TimerEvent: {}
+[9.638387] (-) TimerEvent: {}
+[9.738593] (-) TimerEvent: {}
+[9.838803] (-) TimerEvent: {}
+[9.939050] (-) TimerEvent: {}
+[10.039495] (-) TimerEvent: {}
+[10.139934] (-) TimerEvent: {}
+[10.240478] (-) TimerEvent: {}
+[10.341028] (-) TimerEvent: {}
+[10.441578] (-) TimerEvent: {}
+[10.542023] (-) TimerEvent: {}
+[10.642475] (-) TimerEvent: {}
+[10.742981] (-) TimerEvent: {}
+[10.843384] (-) TimerEvent: {}
+[10.943802] (-) TimerEvent: {}
+[11.044375] (-) TimerEvent: {}
+[11.144761] (-) TimerEvent: {}
+[11.245119] (-) TimerEvent: {}
+[11.345533] (-) TimerEvent: {}
+[11.445920] (-) TimerEvent: {}
+[11.546315] (-) TimerEvent: {}
+[11.646684] (-) TimerEvent: {}
+[11.747054] (-) TimerEvent: {}
+[11.847413] (-) TimerEvent: {}
+[11.947764] (-) TimerEvent: {}
+[12.048107] (-) TimerEvent: {}
+[12.148468] (-) TimerEvent: {}
+[12.248791] (-) TimerEvent: {}
+[12.349232] (-) TimerEvent: {}
+[12.449543] (-) TimerEvent: {}
+[12.549923] (-) TimerEvent: {}
+[12.650360] (-) TimerEvent: {}
+[12.750724] (-) TimerEvent: {}
+[12.851020] (-) TimerEvent: {}
+[12.951460] (-) TimerEvent: {}
+[13.051855] (-) TimerEvent: {}
+[13.152293] (-) TimerEvent: {}
+[13.252876] (-) TimerEvent: {}
+[13.353292] (-) TimerEvent: {}
+[13.453792] (-) TimerEvent: {}
+[13.554323] (-) TimerEvent: {}
+[13.654824] (-) TimerEvent: {}
+[13.755301] (-) TimerEvent: {}
+[13.855675] (-) TimerEvent: {}
+[13.956130] (-) TimerEvent: {}
+[14.056581] (-) TimerEvent: {}
+[14.156964] (-) TimerEvent: {}
+[14.257632] (-) TimerEvent: {}
+[14.358093] (-) TimerEvent: {}
+[14.458537] (-) TimerEvent: {}
+[14.558955] (-) TimerEvent: {}
+[14.659355] (-) TimerEvent: {}
+[14.759708] (-) TimerEvent: {}
+[14.859974] (-) TimerEvent: {}
+[14.960248] (-) TimerEvent: {}
+[15.060567] (-) TimerEvent: {}
+[15.160757] (-) TimerEvent: {}
+[15.261043] (-) TimerEvent: {}
+[15.361397] (-) TimerEvent: {}
+[15.461757] (-) TimerEvent: {}
+[15.562166] (-) TimerEvent: {}
+[15.662494] (-) TimerEvent: {}
+[15.762795] (-) TimerEvent: {}
+[15.863071] (-) TimerEvent: {}
+[15.963373] (-) TimerEvent: {}
+[16.063778] (-) TimerEvent: {}
+[16.164149] (-) TimerEvent: {}
+[16.264530] (-) TimerEvent: {}
+[16.364901] (-) TimerEvent: {}
+[16.465354] (-) TimerEvent: {}
+[16.565786] (-) TimerEvent: {}
+[16.666137] (-) TimerEvent: {}
+[16.766497] (-) TimerEvent: {}
+[16.866890] (-) TimerEvent: {}
+[16.967316] (-) TimerEvent: {}
+[17.067684] (-) TimerEvent: {}
+[17.168049] (-) TimerEvent: {}
+[17.268536] (-) TimerEvent: {}
+[17.368952] (-) TimerEvent: {}
+[17.469395] (-) TimerEvent: {}
+[17.569925] (-) TimerEvent: {}
+[17.670267] (-) TimerEvent: {}
+[17.770690] (-) TimerEvent: {}
+[17.871114] (-) TimerEvent: {}
+[17.971807] (-) TimerEvent: {}
+[18.072610] (-) TimerEvent: {}
+[18.173020] (-) TimerEvent: {}
+[18.273494] (-) TimerEvent: {}
+[18.373897] (-) TimerEvent: {}
+[18.474277] (-) TimerEvent: {}
+[18.574584] (-) TimerEvent: {}
+[18.674851] (-) TimerEvent: {}
+[18.775133] (-) TimerEvent: {}
+[18.875335] (-) TimerEvent: {}
+[18.975669] (-) TimerEvent: {}
+[19.076169] (-) TimerEvent: {}
+[19.176617] (-) TimerEvent: {}
+[19.276968] (-) TimerEvent: {}
+[19.377448] (-) TimerEvent: {}
+[19.477819] (-) TimerEvent: {}
+[19.578374] (-) TimerEvent: {}
+[19.678817] (-) TimerEvent: {}
+[19.779317] (-) TimerEvent: {}
+[19.879674] (-) TimerEvent: {}
+[19.980093] (-) TimerEvent: {}
+[20.080551] (-) TimerEvent: {}
+[20.180915] (-) TimerEvent: {}
+[20.281365] (-) TimerEvent: {}
+[20.381721] (-) TimerEvent: {}
+[20.482170] (-) TimerEvent: {}
+[20.582626] (-) TimerEvent: {}
+[20.683053] (-) TimerEvent: {}
+[20.783610] (-) TimerEvent: {}
+[20.884115] (-) TimerEvent: {}
+[20.984529] (-) TimerEvent: {}
+[21.084891] (-) TimerEvent: {}
+[21.185494] (-) TimerEvent: {}
+[21.286094] (-) TimerEvent: {}
+[21.386599] (-) TimerEvent: {}
+[21.487025] (-) TimerEvent: {}
+[21.587362] (-) TimerEvent: {}
+[21.687780] (-) TimerEvent: {}
+[21.788231] (-) TimerEvent: {}
+[21.888728] (-) TimerEvent: {}
+[21.989244] (-) TimerEvent: {}
+[22.089715] (-) TimerEvent: {}
+[22.190127] (-) TimerEvent: {}
+[22.290584] (-) TimerEvent: {}
+[22.391100] (-) TimerEvent: {}
+[22.491662] (-) TimerEvent: {}
+[22.592132] (-) TimerEvent: {}
+[22.692519] (-) TimerEvent: {}
+[22.792901] (-) TimerEvent: {}
+[22.893410] (-) TimerEvent: {}
+[22.993899] (-) TimerEvent: {}
+[23.094222] (-) TimerEvent: {}
+[23.194807] (-) TimerEvent: {}
+[23.295230] (-) TimerEvent: {}
+[23.395637] (-) TimerEvent: {}
+[23.496026] (-) TimerEvent: {}
+[23.596469] (-) TimerEvent: {}
+[23.696906] (-) TimerEvent: {}
+[23.797281] (-) TimerEvent: {}
+[23.897596] (-) TimerEvent: {}
+[23.997953] (-) TimerEvent: {}
+[24.098198] (-) TimerEvent: {}
+[24.198447] (-) TimerEvent: {}
+[24.298756] (-) TimerEvent: {}
+[24.399136] (-) TimerEvent: {}
+[24.499458] (-) TimerEvent: {}
+[24.599868] (-) TimerEvent: {}
+[24.700122] (-) TimerEvent: {}
+[24.800362] (-) TimerEvent: {}
+[24.900658] (-) TimerEvent: {}
+[25.001009] (-) TimerEvent: {}
+[25.101482] (-) TimerEvent: {}
+[25.201952] (-) TimerEvent: {}
+[25.302326] (-) TimerEvent: {}
+[25.402811] (-) TimerEvent: {}
+[25.503552] (-) TimerEvent: {}
+[25.603881] (-) TimerEvent: {}
+[25.704227] (-) TimerEvent: {}
+[25.804510] (-) TimerEvent: {}
+[25.904886] (-) TimerEvent: {}
+[26.005391] (-) TimerEvent: {}
+[26.106015] (-) TimerEvent: {}
+[26.206469] (-) TimerEvent: {}
+[26.306812] (-) TimerEvent: {}
+[26.407249] (-) TimerEvent: {}
+[26.507566] (-) TimerEvent: {}
+[26.607849] (-) TimerEvent: {}
+[26.708199] (-) TimerEvent: {}
+[26.808536] (-) TimerEvent: {}
+[26.909004] (-) TimerEvent: {}
+[27.009388] (-) TimerEvent: {}
+[27.109750] (-) TimerEvent: {}
+[27.210194] (-) TimerEvent: {}
+[27.310567] (-) TimerEvent: {}
+[27.410867] (-) TimerEvent: {}
+[27.511221] (-) TimerEvent: {}
+[27.611594] (-) TimerEvent: {}
+[27.712021] (-) TimerEvent: {}
+[27.812447] (-) TimerEvent: {}
+[27.912796] (-) TimerEvent: {}
+[28.013146] (-) TimerEvent: {}
+[28.113567] (-) TimerEvent: {}
+[28.213959] (-) TimerEvent: {}
+[28.314352] (-) TimerEvent: {}
+[28.414864] (-) TimerEvent: {}
+[28.515267] (-) TimerEvent: {}
+[28.615581] (-) TimerEvent: {}
+[28.715980] (-) TimerEvent: {}
+[28.816329] (-) TimerEvent: {}
+[28.916593] (-) TimerEvent: {}
+[29.016862] (-) TimerEvent: {}
+[29.117153] (-) TimerEvent: {}
+[29.217366] (-) TimerEvent: {}
+[29.317671] (-) TimerEvent: {}
+[29.418025] (-) TimerEvent: {}
+[29.518485] (-) TimerEvent: {}
+[29.618770] (-) TimerEvent: {}
+[29.719293] (-) TimerEvent: {}
+[29.819693] (-) TimerEvent: {}
+[29.920240] (-) TimerEvent: {}
+[30.020723] (-) TimerEvent: {}
+[30.120985] (-) TimerEvent: {}
+[30.221272] (-) TimerEvent: {}
+[30.258534] (px4_offboard) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/px4_offboard', 'build', '--build-base', '/home/jacob/offb/offboard_ladder/build/px4_offboard/build', 'install', '--record', '/home/jacob/offb/offboard_ladder/build/px4_offboard/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jacob/offb/offboard_ladder/src/px4_offboard', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/jacob/offb/offboard_ladder', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'USER': 'jacob', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib', 'HOME': '/home/jacob', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/jacob', 'DESKTOP_SESSION': 'ubuntu', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-0bc6b27b-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL': '1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '991', 'SYSTEMD_EXEC_PID': '1168', 'IM_CONFIG_CHECK_ENV': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2953', 'VSCODE_CRASH_REPORTER_PROCESS_TYPE': 'extensionHost', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'VSCODE_L10N_BUNDLE_LOCATION': '', 'COLCON_PREFIX_PATH': '/home/jacob/offb/offboard_ladder/install:/home/jacob/ros2_px4_offboard_example_ws/install', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'humble', 'LOGNAME': 'jacob', 'JOURNAL_STREAM': '8:16457', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'APPLICATIONINSIGHTS_CONFIGURATION_CONTENT': '{}', 'RUST_LOG': 'warn', 'USERNAME': 'jacob', 'STM32_PRG_PATH': '/home/jacob/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/jacob/.local/bin:/tmp/.tmpJ05g1o:/opt/ros/humble/bin:/home/jacob/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/jacob/.vscode/extensions/openai.chatgpt-0.4.43-linux-x64/bin/linux-x86_64', 'SESSION_MANAGER': 'local/jacob-Surface-Laptop-5:@/tmp/.ICE-unix/1115,unix/jacob-Surface-Laptop-5:/tmp/.ICE-unix/1115', 'INVOCATION_ID': 'a999beeb912c4f18af27a5319557a1a7', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.GSRUF3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/ros2_px4_offboard_example_ws/install/px4_offboard:/opt/ros/humble', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:56ad8e87-8cd5-4b72-be1e-3231287deb38', 'QT_ACCESSIBILITY': '1', 'ELECTRON_RUN_AS_NODE': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jacob/offb/offboard_ladder/build/px4_offboard', 'VSCODE_CLI': '1', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/jacob/.config/Code/CachedData/2901c5ac6db8a986a5666c3af51ff804d05af0d4', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jacob/offb/offboard_ladder/build/px4_offboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:/home/jacob/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages:/home/jacob/ros2_px4_offboard_example_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'ELECTRON_NO_ATTACH_CONSOLE': '1', 'CMAKE_PREFIX_PATH': '/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/opt/ros/humble', 'VSCODE_PID': '37205'}, 'shell': False}
+[30.321482] (-) TimerEvent: {}
+[30.356146] (px4_offboard) StderrLine: {'line': b"/home/jacob/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'\n"}
+[30.356363] (px4_offboard) StderrLine: {'line': b'  warnings.warn(msg)\n'}
+[30.405335] (px4_offboard) StdoutLine: {'line': b'running egg_info\n'}
+[30.413309] (px4_offboard) StdoutLine: {'line': b'writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO\n'}
+[30.413538] (px4_offboard) StdoutLine: {'line': b'writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt\n'}
+[30.413855] (px4_offboard) StdoutLine: {'line': b'writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt\n'}
+[30.413940] (px4_offboard) StdoutLine: {'line': b'writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt\n'}
+[30.414002] (px4_offboard) StdoutLine: {'line': b'writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt\n'}
+[30.421680] (-) TimerEvent: {}
+[30.430885] (px4_offboard) StdoutLine: {'line': b"reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'\n"}
+[30.431848] (px4_offboard) StdoutLine: {'line': b"writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'\n"}
+[30.432009] (px4_offboard) StdoutLine: {'line': b'running build\n'}
+[30.432081] (px4_offboard) StdoutLine: {'line': b'running build_py\n'}
+[30.432367] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/velocity_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard\n'}
+[30.432463] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/offboard_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard\n'}
+[30.432530] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/__init__.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard\n'}
+[30.432591] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard\n'}
+[30.432651] (px4_offboard) StdoutLine: {'line': b'copying px4_offboard/circle_offboard.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard\n'}
+[30.432811] (px4_offboard) StdoutLine: {'line': b'running install\n'}
+[30.435018] (px4_offboard) StdoutLine: {'line': b'running install_lib\n'}
+[30.443666] (px4_offboard) StdoutLine: {'line': b'running install_data\n'}
+[30.443859] (px4_offboard) StdoutLine: {'line': b'copying resource/px4_offboard -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/ament_index/resource_index/packages\n'}
+[30.444135] (px4_offboard) StdoutLine: {'line': b'copying package.xml -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard\n'}
+[30.444236] (px4_offboard) StdoutLine: {'line': b'copying launch/velocity_control.launch.py -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard\n'}
+[30.444319] (px4_offboard) StdoutLine: {'line': b'running install_egg_info\n'}
+[30.453371] (px4_offboard) StdoutLine: {'line': b"removing '/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[30.453528] (px4_offboard) StdoutLine: {'line': b'Copying ../../build/px4_offboard/px4_offboard.egg-info to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info\n'}
+[30.453777] (px4_offboard) StdoutLine: {'line': b'running install_scripts\n'}
+[30.471358] (px4_offboard) StdoutLine: {'line': b'Installing circle_offboard script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard\n'}
+[30.471523] (px4_offboard) StdoutLine: {'line': b'Installing control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard\n'}
+[30.471587] (px4_offboard) StdoutLine: {'line': b'Installing offboard_control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard\n'}
+[30.471650] (px4_offboard) StdoutLine: {'line': b'Installing velocity_control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard\n'}
+[30.471882] (px4_offboard) StdoutLine: {'line': b"writing list of installed files to '/home/jacob/offb/offboard_ladder/build/px4_offboard/install.log'\n"}
+[30.488786] (px4_offboard) CommandEnded: {'returncode': 0}
+[30.499444] (px4_offboard) JobEnded: {'identifier': 'px4_offboard', 'rc': 0}
+[30.499768] (-) EventReactorShutdown: {}
