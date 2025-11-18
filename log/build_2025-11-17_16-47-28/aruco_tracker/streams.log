@@ -1,0 +1,31 @@
+[0.011s] Invoking command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/aruco_tracker -- -j12 -l12
+[0.145s] [35m[1mConsolidate compiler generated dependencies of target aruco_tracker[0m
+[0.145s] [100%] Built target aruco_tracker
+[0.153s] Invoked command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker' returned '0': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/aruco_tracker -- -j12 -l12
+[0.154s] Invoking command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/aruco_tracker
+[0.158s] -- Install configuration: ""
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/aruco_tracker/aruco_tracker
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/v1_16_tracker.launch.py
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/front_camera_aruco.launch.py
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/downward_camera_aruco.launch.py
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/aruco_tracker.launch.py
+[0.158s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/moving_aruco.launch.py
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//cfg
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//cfg/params.yaml
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/package_run_dependencies/aruco_tracker
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/parent_prefix_path/aruco_tracker
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/ament_prefix_path.sh
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/ament_prefix_path.dsv
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/path.sh
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/path.dsv
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.bash
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.sh
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.zsh
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.dsv
+[0.159s] -- Installing: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.dsv
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/packages/aruco_tracker
+[0.159s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/cmake/aruco_trackerConfig.cmake
+[0.160s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/cmake/aruco_trackerConfig-version.cmake
+[0.160s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.xml
+[0.161s] Invoked command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker' returned '0': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/aruco_tracker

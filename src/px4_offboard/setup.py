@@ -29,6 +29,9 @@ setup(
                 'control = px4_offboard.control:main',
                 'circle_offboard = px4_offboard.circle_offboard_mode:main',
                 'offboard_figure8 = px4_offboard.offboard_figure8_node:main',
+                'offboard_ship_land = px4_offboard.offboard_ship_land:main',
+                'offboard_ship_land_sim = px4_offboard.offboard_ship_land_sim:main',
+                'codex_test = px4_offboard.codex_test:main',
         ],
     },
 )

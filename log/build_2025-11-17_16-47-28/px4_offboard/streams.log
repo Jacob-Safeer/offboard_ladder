@@ -1,0 +1,40 @@
+[0.502s] Invoking command in '/home/jacob/offb/offboard_ladder/src/px4_offboard': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/build/px4_offboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/jacob/offb/offboard_ladder/build/px4_offboard/build install --record /home/jacob/offb/offboard_ladder/build/px4_offboard/install.log --single-version-externally-managed install_data
+[0.632s] /home/jacob/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.632s]   warnings.warn(msg)
+[0.693s] running egg_info
+[0.702s] writing ../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO
+[0.702s] writing dependency_links to ../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt
+[0.703s] writing entry points to ../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt
+[0.703s] writing requirements to ../../build/px4_offboard/px4_offboard.egg-info/requires.txt
+[0.703s] writing top-level names to ../../build/px4_offboard/px4_offboard.egg-info/top_level.txt
+[0.721s] reading manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[0.722s] writing manifest file '../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[0.723s] running build
+[0.723s] running build_py
+[0.723s] copying px4_offboard/circle_offboard_mode.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/offboard_ship_land.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/velocity_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/offboard_control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/__init__.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/control.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.723s] copying px4_offboard/offboard_figure8_node.py -> /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard
+[0.724s] running install
+[0.728s] running install_lib
+[0.739s] copying /home/jacob/offb/offboard_ladder/build/px4_offboard/build/lib/px4_offboard/offboard_ship_land.py -> /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard
+[0.739s] byte-compiling /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard/offboard_ship_land.py to offboard_ship_land.cpython-310.pyc
+[0.741s] running install_data
+[0.741s] copying resource/px4_offboard -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/ament_index/resource_index/packages
+[0.741s] copying package.xml -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard
+[0.741s] copying launch/velocity_control.launch.py -> /home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard
+[0.741s] running install_egg_info
+[0.751s] removing '/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)
+[0.751s] Copying ../../build/px4_offboard/px4_offboard.egg-info to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info
+[0.751s] running install_scripts
+[0.770s] Installing circle_offboard script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] Installing control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] Installing offboard_control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] Installing offboard_figure8 script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] Installing offboard_ship_land script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] Installing velocity_control script to /home/jacob/offb/offboard_ladder/install/px4_offboard/lib/px4_offboard
+[0.770s] writing list of installed files to '/home/jacob/offb/offboard_ladder/build/px4_offboard/install.log'
+[0.791s] Invoked command in '/home/jacob/offb/offboard_ladder/src/px4_offboard' returned '0': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/build/px4_offboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/jacob/offb/offboard_ladder/build/px4_offboard/build install --record /home/jacob/offb/offboard_ladder/build/px4_offboard/install.log --single-version-externally-managed install_data

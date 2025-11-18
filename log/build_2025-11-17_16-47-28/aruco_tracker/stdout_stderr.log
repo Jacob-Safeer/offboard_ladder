@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target aruco_tracker[0m
+[100%] Built target aruco_tracker
+-- Install configuration: ""
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/aruco_tracker/aruco_tracker
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/v1_16_tracker.launch.py
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/front_camera_aruco.launch.py
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/downward_camera_aruco.launch.py
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/aruco_tracker.launch.py
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//launch/moving_aruco.launch.py
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//cfg
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker//cfg/params.yaml
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/package_run_dependencies/aruco_tracker
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/parent_prefix_path/aruco_tracker
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/ament_prefix_path.sh
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/path.sh
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/environment/path.dsv
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.bash
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.sh
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.zsh
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/local_setup.dsv
+-- Installing: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.dsv
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/ament_index/resource_index/packages/aruco_tracker
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/cmake/aruco_trackerConfig.cmake
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/cmake/aruco_trackerConfig-version.cmake
+-- Up-to-date: /home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.xml

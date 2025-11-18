@@ -1,0 +1,6 @@
+Invoking command in '/home/jacob/offb/offboard_ladder/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jacob/offb/offboard_ladder/src/vision_opencv/cv_bridge -DCMAKE_INSTALL_PREFIX=/home/jacob/offb/offboard_ladder/install/cv_bridge
+Invoked command in '/home/jacob/offb/offboard_ladder/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jacob/offb/offboard_ladder/src/vision_opencv/cv_bridge -DCMAKE_INSTALL_PREFIX=/home/jacob/offb/offboard_ladder/install/cv_bridge
+Invoking command in '/home/jacob/offb/offboard_ladder/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/cv_bridge -- -j12 -l12
+Invoked command in '/home/jacob/offb/offboard_ladder/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/cv_bridge -- -j12 -l12
+Invoking command in '/home/jacob/offb/offboard_ladder/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/cv_bridge
+Invoked command in '/home/jacob/offb/offboard_ladder/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/cv_bridge

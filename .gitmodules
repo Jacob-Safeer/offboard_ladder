@@ -6,3 +6,6 @@
 	path = src/px4_ros_com
 	url = https://github.com/PX4/px4_ros_com.git
 	branch = release/1.16
+[submodule "src/vision_opencv"]
+	path = src/vision_opencv
+	url = https://github.com/ros-perception/vision_opencv.git

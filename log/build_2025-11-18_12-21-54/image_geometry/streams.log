@@ -1,0 +1,54 @@
+[0.012s] Invoking command in '/home/jacob/offb/offboard_ladder/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/image_geometry -- -j12 -l12
+[0.052s] [ 18%] Built target gtest
+[0.058s] [ 63%] Built target gtest_main
+[0.058s] [ 63%] Built target image_geometry
+[0.059s] [ 63%] Built target ament_cmake_python_copy_image_geometry
+[0.076s] [ 81%] Built target image_geometry-utest
+[0.077s] [100%] Built target image_geometry-utest-equi
+[0.215s] running egg_info
+[0.224s] writing image_geometry.egg-info/PKG-INFO
+[0.224s] writing dependency_links to image_geometry.egg-info/dependency_links.txt
+[0.225s] writing top-level names to image_geometry.egg-info/top_level.txt
+[0.251s] reading manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.251s] writing manifest file 'image_geometry.egg-info/SOURCES.txt'
+[0.272s] [100%] Built target ament_cmake_python_build_image_geometry_egg
+[0.282s] Invoked command in '/home/jacob/offb/offboard_ladder/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/image_geometry -- -j12 -l12
+[0.283s] Invoking command in '/home/jacob/offb/offboard_ladder/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/image_geometry
+[0.289s] -- Install configuration: ""
+[0.289s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/pythonpath.sh
+[0.289s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/pythonpath.dsv
+[0.289s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry-4.1.0-py3.10.egg-info
+[0.290s] -- Installing: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry-4.1.0-py3.10.egg-info/SOURCES.txt
+[0.290s] -- Installing: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry-4.1.0-py3.10.egg-info/top_level.txt
+[0.290s] -- Installing: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry-4.1.0-py3.10.egg-info/dependency_links.txt
+[0.290s] -- Installing: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry-4.1.0-py3.10.egg-info/PKG-INFO
+[0.290s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry
+[0.290s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry/cameramodels.py
+[0.290s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry/__init__.py
+[0.321s] Listing '/home/jacob/offb/offboard_ladder/install/image_geometry/local/lib/python3.10/dist-packages/image_geometry'...
+[0.325s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/include/image_geometry
+[0.325s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/include/image_geometry/image_geometry
+[0.325s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/include/image_geometry/image_geometry/stereo_camera_model.hpp
+[0.325s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/include/image_geometry/image_geometry/visibility_control.hpp
+[0.325s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/include/image_geometry/image_geometry/pinhole_camera_model.hpp
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/lib/libimage_geometry.so
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/ament_index/resource_index/package_run_dependencies/image_geometry
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/ament_index/resource_index/parent_prefix_path/image_geometry
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/ament_prefix_path.sh
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/ament_prefix_path.dsv
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/path.sh
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/environment/path.dsv
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/local_setup.bash
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/local_setup.sh
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/local_setup.zsh
+[0.326s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/local_setup.dsv
+[0.327s] -- Installing: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.dsv
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/ament_index/resource_index/packages/image_geometry
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport.cmake
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/export_image_geometryExport-noconfig.cmake
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_targets-extras.cmake
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/image_geometryConfig.cmake
+[0.327s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/cmake/image_geometryConfig-version.cmake
+[0.328s] -- Up-to-date: /home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.xml
+[0.335s] Invoked command in '/home/jacob/offb/offboard_ladder/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/image_geometry

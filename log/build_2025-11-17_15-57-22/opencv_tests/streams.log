@@ -1,0 +1,56 @@
+[0.534s] Invoking command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data
+[0.682s] /home/jacob/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.682s]   warnings.warn(msg)
+[0.715s] /home/jacob/.local/lib/python3.10/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.715s] !!
+[0.715s] 
+[0.715s]         ********************************************************************************
+[0.715s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.715s] 
+[0.715s]         License :: OSI Approved :: Apache Software License
+[0.715s] 
+[0.715s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.715s]         ********************************************************************************
+[0.715s] 
+[0.715s] !!
+[0.715s]   self._finalize_license_expression()
+[0.781s] running egg_info
+[0.797s] creating ../../../build/opencv_tests/opencv_tests.egg-info
+[0.797s] writing ../../../build/opencv_tests/opencv_tests.egg-info/PKG-INFO
+[0.797s] writing dependency_links to ../../../build/opencv_tests/opencv_tests.egg-info/dependency_links.txt
+[0.797s] writing entry points to ../../../build/opencv_tests/opencv_tests.egg-info/entry_points.txt
+[0.798s] writing requirements to ../../../build/opencv_tests/opencv_tests.egg-info/requires.txt
+[0.798s] writing top-level names to ../../../build/opencv_tests/opencv_tests.egg-info/top_level.txt
+[0.798s] writing manifest file '../../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[0.833s] reading manifest file '../../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[0.834s] writing manifest file '../../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[0.834s] running build
+[0.834s] running build_py
+[0.834s] creating /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.834s] copying opencv_tests/rosfacedetect.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.835s] copying opencv_tests/broadcast.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.835s] copying opencv_tests/__init__.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.835s] copying opencv_tests/source.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.835s] running install
+[0.839s] running install_lib
+[0.857s] creating /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests
+[0.857s] copying /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests/rosfacedetect.py -> /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests
+[0.857s] copying /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests/broadcast.py -> /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests
+[0.858s] copying /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests/__init__.py -> /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests
+[0.858s] copying /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests/source.py -> /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests
+[0.858s] byte-compiling /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests/rosfacedetect.py to rosfacedetect.cpython-310.pyc
+[0.860s] byte-compiling /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests/broadcast.py to broadcast.cpython-310.pyc
+[0.860s] byte-compiling /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests/__init__.py to __init__.cpython-310.pyc
+[0.860s] byte-compiling /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests/source.py to source.cpython-310.pyc
+[0.860s] running install_data
+[0.860s] creating /home/jacob/offb/offboard_ladder/install/opencv_tests/share/ament_index/resource_index/packages
+[0.860s] copying resource/opencv_tests -> /home/jacob/offb/offboard_ladder/install/opencv_tests/share/ament_index/resource_index/packages
+[0.861s] copying package.xml -> /home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests
+[0.861s] running install_egg_info
+[0.879s] Copying ../../../build/opencv_tests/opencv_tests.egg-info to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests-4.1.0-py3.10.egg-info
+[0.879s] running install_scripts
+[0.914s] Installing broadcast script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.914s] Installing rosfacedetect script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.914s] Installing source script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.914s] writing list of installed files to '/home/jacob/offb/offboard_ladder/build/opencv_tests/install.log'
+[0.938s] Invoked command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests' returned '0': AMENT_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:/home/jacob/offb/offboard_ladder/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data

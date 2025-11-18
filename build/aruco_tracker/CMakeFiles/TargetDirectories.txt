@@ -1,0 +1,10 @@
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/uninstall.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/aruco_tracker_uninstall.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/aruco_tracker.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/test.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/edit_cache.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/rebuild_cache.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/list_install_components.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/install.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/install/local.dir
+/home/jacob/offb/offboard_ladder/build/aruco_tracker/CMakeFiles/install/strip.dir

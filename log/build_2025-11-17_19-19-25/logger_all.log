@@ -1,0 +1,615 @@
+[0.063s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.063s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b6f917b02b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b6f9177f8b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b6f9177f8b0>>, mixin_verb=('build',))
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.087s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.087s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jacob/offb/offboard_ladder'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extension 'ignore'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extension 'ignore_ament_install'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extensions ['colcon_pkg']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extension 'colcon_pkg'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extensions ['colcon_meta']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extension 'colcon_meta'
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extensions ['ros']
+[0.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/aruco_tracker) by extension 'ros'
+[0.099s] DEBUG:colcon.colcon_core.package_identification:Package 'src/aruco_tracker' with type 'ros.ament_cmake' and name 'aruco_tracker'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[0.099s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_offboard) by extension 'ros'
+[0.100s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_offboard' with type 'ros.ament_python' and name 'px4_offboard'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[0.101s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore_ament_install'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_pkg']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_pkg'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_meta']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_meta'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ros']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ros'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['cmake', 'python']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'cmake'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['python_setup_py']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python_setup_py'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore'
+[0.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ros'
+[0.102s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/cv_bridge' with type 'ros.ament_cmake' and name 'cv_bridge'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/image_geometry' with type 'ros.ament_cmake' and name 'image_geometry'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore_ament_install'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_pkg']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_pkg'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_meta']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_meta'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ros']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/opencv_tests' with type 'ros.ament_python' and name 'opencv_tests'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore_ament_install'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_pkg']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_pkg'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_meta']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_meta'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ros']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ros'
+[0.104s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/vision_opencv' with type 'ros.ament_cmake' and name 'vision_opencv'
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.119s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/jacob/offb/offboard_ladder/install
+[0.120s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 298 installed packages in /opt/ros/humble
+[0.121s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.140s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'image_geometry' is in: /home/jacob/offb/offboard_ladder/install/image_geometry, /opt/ros/humble
+	'cv_bridge' is in: /home/jacob/offb/offboard_ladder/install/cv_bridge, /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding cv_bridge image_geometry
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_args' from command line to 'None'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target' from command line to 'None'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.140s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.140s] DEBUG:colcon.colcon_core.verb:Building package 'cv_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/cv_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/cv_bridge', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/vision_opencv/cv_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.141s] DEBUG:colcon.colcon_core.verb:Building package 'image_geometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/image_geometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/image_geometry', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/vision_opencv/image_geometry', 'symlink_install': False, 'test_result_base': None}
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.141s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/px4_msgs', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_target' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_clean_cache' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_clean_first' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'cmake_force_configure' from command line to 'False'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'ament_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'catkin_cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'aruco_tracker' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.141s] DEBUG:colcon.colcon_core.verb:Building package 'aruco_tracker' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/aruco_tracker', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/aruco_tracker', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/aruco_tracker', 'symlink_install': False, 'test_result_base': None}
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_args' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target' from command line to 'None'
+[0.141s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.142s] DEBUG:colcon.colcon_core.verb:Building package 'opencv_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/opencv_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/opencv_tests', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests', 'symlink_install': False, 'test_result_base': None}
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_target' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_clean_cache' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_clean_first' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'cmake_force_configure' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'ament_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'catkin_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_offboard' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.142s] DEBUG:colcon.colcon_core.verb:Building package 'px4_offboard' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/px4_offboard', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/px4_offboard', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/px4_offboard', 'symlink_install': False, 'test_result_base': None}
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.142s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/px4_ros_com', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_cache' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_first' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_force_configure' from command line to 'False'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'ament_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_cmake_args' from command line to 'None'
+[0.142s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.142s] DEBUG:colcon.colcon_core.verb:Building package 'vision_opencv' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jacob/offb/offboard_ladder/build/vision_opencv', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jacob/offb/offboard_ladder/install/vision_opencv', 'merge_install': False, 'path': '/home/jacob/offb/offboard_ladder/src/vision_opencv/vision_opencv', 'symlink_install': False, 'test_result_base': None}
+[0.142s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.143s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.143s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/cv_bridge' with build type 'ament_cmake'
+[0.143s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/cv_bridge'
+[0.145s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.146s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.146s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.149s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/px4_msgs' with build type 'ament_cmake'
+[0.150s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/px4_msgs'
+[0.150s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.150s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.153s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/image_geometry' with build type 'ament_cmake'
+[0.153s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/image_geometry'
+[0.153s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.153s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/cv_bridge -- -j12 -l12
+[0.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_msgs -- -j12 -l12
+[0.164s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/image_geometry -- -j12 -l12
+[0.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/cv_bridge -- -j12 -l12
+[0.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/cv_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/cv_bridge
+[0.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/image_geometry -- -j12 -l12
+[0.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/image_geometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/image_geometry
+[0.440s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[0.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/cv_bridge
+[0.442s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge' for CMake module files
+[0.443s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge' for CMake config files
+[0.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[0.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[0.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[0.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[0.445s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib'
+[0.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[0.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[0.446s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[0.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[0.446s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/bin'
+[0.446s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[0.447s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib/python3.10/site-packages'
+[0.447s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/bin'
+[0.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.ps1'
+[0.448s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.dsv'
+[0.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.sh'
+[0.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.bash'
+[0.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.zsh'
+[0.451s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[0.451s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge' for CMake module files
+[0.452s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge' for CMake config files
+[0.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[0.456s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib'
+[0.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[0.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[0.457s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/bin'
+[0.457s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[0.457s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/lib/python3.10/site-packages'
+[0.458s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/cv_bridge/bin'
+[0.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.ps1'
+[0.459s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.dsv'
+[0.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.sh'
+[0.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.bash'
+[0.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/cv_bridge/share/cv_bridge/package.zsh'
+[0.460s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[0.461s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests' with build type 'ament_python'
+[0.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'ament_prefix_path')
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.ps1'
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.dsv'
+[0.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.sh'
+[0.462s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.462s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.464s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[0.464s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry' for CMake module files
+[0.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/image_geometry
+[0.465s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry' for CMake config files
+[0.465s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[0.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[0.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[0.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[0.466s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib'
+[0.466s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[0.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[0.466s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[0.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[0.467s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/bin'
+[0.467s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[0.467s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib/python3.10/site-packages'
+[0.467s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/bin'
+[0.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.ps1'
+[0.467s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.dsv'
+[0.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.sh'
+[0.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.bash'
+[0.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.zsh'
+[0.468s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/image_geometry/share/colcon-core/packages/image_geometry)
+[0.469s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[0.469s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry' for CMake module files
+[0.469s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry' for CMake config files
+[0.469s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[0.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[0.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[0.470s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib'
+[0.470s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[0.471s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/bin'
+[0.471s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[0.471s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/lib/python3.10/site-packages'
+[0.471s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/image_geometry/bin'
+[0.471s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.ps1'
+[0.471s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.dsv'
+[0.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.sh'
+[0.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.bash'
+[0.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/image_geometry/share/image_geometry/package.zsh'
+[0.472s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/image_geometry/share/colcon-core/packages/image_geometry)
+[0.473s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/vision_opencv' with build type 'ament_cmake'
+[0.473s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/vision_opencv'
+[0.473s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.473s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.602s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests'
+[0.602s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.602s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/vision_opencv': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/vision_opencv -- -j12 -l12
+[0.638s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/vision_opencv' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/vision_opencv -- -j12 -l12
+[0.639s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/vision_opencv': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/vision_opencv
+[0.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv' for CMake module files
+[0.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/vision_opencv' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/vision_opencv
+[0.647s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv' for CMake config files
+[0.647s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[0.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[0.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/bin'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/lib/python3.10/site-packages'
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/bin'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.ps1'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.dsv'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.sh'
+[0.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.bash'
+[0.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.zsh'
+[0.650s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[0.650s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[0.651s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv' for CMake module files
+[0.651s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv' for CMake config files
+[0.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[0.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/bin'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/lib/python3.10/site-packages'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/vision_opencv/bin'
+[0.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.ps1'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.dsv'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.sh'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.bash'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/vision_opencv/share/vision_opencv/package.zsh'
+[0.655s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[0.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/image_geometry LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data
+[0.965s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_msgs -- -j12 -l12
+[0.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/px4_msgs
+[1.186s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests' for CMake module files
+[1.188s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests' for CMake config files
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests/lib'
+[1.197s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests/bin'
+[1.198s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/pkgconfig/opencv_tests.pc'
+[1.198s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages'
+[1.199s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'pythonpath')
+[1.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/pythonpath.ps1'
+[1.201s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/pythonpath.dsv'
+[1.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/hook/pythonpath.sh'
+[1.206s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/opencv_tests/bin'
+[1.207s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opencv_tests)
+[1.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/package.ps1'
+[1.209s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/package.dsv'
+[1.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/package.sh'
+[1.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/package.bash'
+[1.216s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests/package.zsh'
+[1.219s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/opencv_tests/share/colcon-core/packages/opencv_tests)
+[1.251s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs' for CMake module files
+[1.255s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs' for CMake config files
+[1.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/image_geometry LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data
+[1.309s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[1.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[1.311s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[1.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[1.314s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib'
+[1.315s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[1.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[1.317s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[1.317s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/px4_msgs
+[1.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/bin'
+[1.318s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib/python3.10/site-packages'
+[1.319s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/bin'
+[1.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.ps1'
+[1.320s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.dsv'
+[1.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.sh'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.bash'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.zsh'
+[1.321s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[1.322s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[1.322s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs' for CMake module files
+[1.323s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs' for CMake config files
+[1.327s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[1.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[1.328s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[1.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib'
+[1.328s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/bin'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/lib/python3.10/site-packages'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_msgs/bin'
+[1.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.ps1'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.dsv'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.sh'
+[1.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.bash'
+[1.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_msgs/share/px4_msgs/package.zsh'
+[1.333s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[1.333s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/aruco_tracker' with build type 'ament_cmake'
+[1.333s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/aruco_tracker'
+[1.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.337s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/px4_offboard' with build type 'ament_python'
+[1.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_offboard', 'ament_prefix_path')
+[1.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/ament_prefix_path.ps1'
+[1.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/ament_prefix_path.dsv'
+[1.338s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/ament_prefix_path.sh'
+[1.339s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.339s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.342s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jacob/offb/offboard_ladder/src/px4_ros_com' with build type 'ament_cmake'
+[1.342s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jacob/offb/offboard_ladder/src/px4_ros_com'
+[1.342s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.342s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.347s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/aruco_tracker -- -j12 -l12
+[1.473s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jacob/offb/offboard_ladder/src/px4_offboard'
+[1.474s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.474s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_ros_com -- -j12 -l12
+[1.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/aruco_tracker -- -j12 -l12
+[1.481s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/aruco_tracker
+[1.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_tracker)
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker' for CMake module files
+[1.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/aruco_tracker' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/aruco_tracker
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker' for CMake config files
+[1.488s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_tracker', 'cmake_prefix_path')
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.ps1'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.sh'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/bin'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/pkgconfig/aruco_tracker.pc'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/python3.10/site-packages'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/bin'
+[1.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.ps1'
+[1.491s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.dsv'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.sh'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.bash'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.zsh'
+[1.493s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/colcon-core/packages/aruco_tracker)
+[1.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aruco_tracker)
+[1.493s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker' for CMake module files
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker' for CMake config files
+[1.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('aruco_tracker', 'cmake_prefix_path')
+[1.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.ps1'
+[1.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.dsv'
+[1.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/hook/cmake_prefix_path.sh'
+[1.495s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib'
+[1.495s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/bin'
+[1.495s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/pkgconfig/aruco_tracker.pc'
+[1.496s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/lib/python3.10/site-packages'
+[1.496s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/aruco_tracker/bin'
+[1.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.ps1'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.dsv'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.sh'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.bash'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/aruco_tracker/package.zsh'
+[1.498s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/aruco_tracker/share/colcon-core/packages/aruco_tracker)
+[1.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/src/px4_offboard': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/px4_offboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/jacob/offb/offboard_ladder/build/px4_offboard/build install --record /home/jacob/offb/offboard_ladder/build/px4_offboard/install.log --single-version-externally-managed install_data
+[1.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/jacob/offb/offboard_ladder/build/px4_ros_com -- -j12 -l12
+[1.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jacob/offb/offboard_ladder/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/px4_ros_com
+[1.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[1.792s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com' for CMake module files
+[1.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/px4_offboard:/home/jacob/offb/offboard_ladder/install/opencv_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/jacob/offb/offboard_ladder/build/px4_ros_com
+[1.793s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com' for CMake config files
+[1.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[1.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[1.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[1.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[1.795s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib'
+[1.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[1.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[1.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[1.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/bin'
+[1.797s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[1.797s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib/python3.10/site-packages'
+[1.797s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/bin'
+[1.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[1.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[1.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.sh'
+[1.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.bash'
+[1.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[1.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[1.801s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[1.801s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com' for CMake module files
+[1.801s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com' for CMake config files
+[1.802s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[1.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[1.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[1.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[1.803s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib'
+[1.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[1.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[1.804s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[1.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/bin'
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib/python3.10/site-packages'
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_ros_com/bin'
+[1.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[1.806s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[1.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.sh'
+[1.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.bash'
+[1.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[1.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard' for CMake module files
+[1.979s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jacob/offb/offboard_ladder/src/px4_offboard' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/image_geometry:/home/jacob/offb/offboard_ladder/install/cv_bridge LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/px4_offboard/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/px4_offboard build --build-base /home/jacob/offb/offboard_ladder/build/px4_offboard/build install --record /home/jacob/offb/offboard_ladder/build/px4_offboard/install.log --single-version-externally-managed install_data
+[1.979s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard' for CMake config files
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard/lib'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard/bin'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/pkgconfig/px4_offboard.pc'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard/lib/python3.10/site-packages'
+[1.980s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_offboard', 'pythonpath')
+[1.980s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/pythonpath.ps1'
+[1.981s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/pythonpath.dsv'
+[1.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/hook/pythonpath.sh'
+[1.982s] Level 1:colcon.colcon_core.environment:checking '/home/jacob/offb/offboard_ladder/install/px4_offboard/bin'
+[1.982s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_offboard)
+[1.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/package.ps1'
+[1.982s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/package.dsv'
+[1.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/package.sh'
+[1.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/package.bash'
+[1.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/jacob/offb/offboard_ladder/install/px4_offboard/share/px4_offboard/package.zsh'
+[1.984s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jacob/offb/offboard_ladder/install/px4_offboard/share/colcon-core/packages/px4_offboard)
+[1.984s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.984s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.984s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.984s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.990s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.990s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.990s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.999s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.999s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacob/offb/offboard_ladder/install/local_setup.ps1'
+[2.000s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jacob/offb/offboard_ladder/install/_local_setup_util_ps1.py'
+[2.002s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacob/offb/offboard_ladder/install/setup.ps1'
+[2.003s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacob/offb/offboard_ladder/install/local_setup.sh'
+[2.003s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jacob/offb/offboard_ladder/install/_local_setup_util_sh.py'
+[2.004s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacob/offb/offboard_ladder/install/setup.sh'
+[2.005s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacob/offb/offboard_ladder/install/local_setup.bash'
+[2.006s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacob/offb/offboard_ladder/install/setup.bash'
+[2.007s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jacob/offb/offboard_ladder/install/local_setup.zsh'
+[2.008s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jacob/offb/offboard_ladder/install/setup.zsh'
