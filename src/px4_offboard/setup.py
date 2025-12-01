@@ -32,6 +32,7 @@ setup(
                 'offboard_ship_land = px4_offboard.offboard_ship_land:main',
                 'offboard_ship_land_sim = px4_offboard.offboard_ship_land_sim:main',
                 'codex_test = px4_offboard.codex_test:main',
+                'offboard_test = px4_offboard.offboard_test:main',
         ],
     },
 )

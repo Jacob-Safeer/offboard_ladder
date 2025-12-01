@@ -1,183 +1,303 @@
 #!/usr/bin/env python3
-
 import math
+from typing import Optional, Tuple
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy, qos_profile_sensor_data
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
-from geometry_msgs.msg import PoseStamped
 from px4_msgs.msg import (
     OffboardControlMode,
     TrajectorySetpoint,
+    VehicleCommand,
     VehicleLocalPosition,
     VehicleStatus,
 )
 
 
-class CodexTestNode(Node):
+class LateralStepOffboard(Node):
     """
-    Simplest possible tag-aware offboard node:
+    Simple PX4 offboard controller:
+      1. Waits for valid local position (after manual takeoff).
+      2. Pilot flips to OFFBOARD; the node captures current (x, y, z, yaw).
+      3. Moves 1 m "left" (y + 1).
+      4. Moves back to the captured start point.
+      5. Holds the start point.
 
-    - Publishes the offboard heartbeat.
-    - When the vehicle is ARMED+OFFBOARD it re-publishes the current position
-      setpoint so the drone holds its place.
-    - Subscribes to /front/target_pose and logs tag detections so we can verify
-      the pipeline end-to-end before adding closed-loop behavior.
+    Run this node AFTER the pilot has taken off and stabilized in a position mode.
+    It streams setpoints continuously; the pilot chooses when to enter OFFBOARD.
     """
 
-    def __init__(self) -> None:
-        super().__init__("codex_test")
+    def __init__(self):
+        super().__init__('lateral_step_offboard')
 
-        qos_best_effort = QoSProfile(
-            depth=1,
+        qos = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
         )
 
-        self.offboard_mode_pub = self.create_publisher(
-            OffboardControlMode, "/fmu/in/offboard_control_mode", qos_best_effort
+        # Publishers to PX4
+        self.offboard_control_mode_pub = self.create_publisher(
+            OffboardControlMode,
+            '/fmu/in/offboard_control_mode',
+            qos,
         )
-        self.setpoint_pub = self.create_publisher(
-            TrajectorySetpoint, "/fmu/in/trajectory_setpoint", qos_best_effort
+        self.trajectory_setpoint_pub = self.create_publisher(
+            TrajectorySetpoint,
+            '/fmu/in/trajectory_setpoint',
+            qos,
         )
-
+        self.vehicle_command_pub = self.create_publisher(
+            VehicleCommand,
+            '/fmu/in/vehicle_command',
+            qos,
+        )
         self.vehicle_status_sub = self.create_subscription(
             VehicleStatus,
-            "/fmu/out/vehicle_status",
+            '/fmu/out/vehicle_status',
             self.vehicle_status_callback,
-            qos_best_effort,
+            QoSProfile(
+                reliability=ReliabilityPolicy.BEST_EFFORT,
+                durability=DurabilityPolicy.VOLATILE,
+                history=HistoryPolicy.KEEP_LAST,
+                depth=1,
+            ),
         )
 
-        self.vehicle_local_position_sub = self.create_subscription(
+        # Local position subscriber
+        self.local_position_sub = self.create_subscription(
             VehicleLocalPosition,
-            "/fmu/out/vehicle_local_position",
-            self.vehicle_local_position_callback,
-            qos_profile_sensor_data,
+            '/fmu/out/vehicle_local_position',
+            self.local_position_callback,
+            qos,
         )
 
-        self.tag_sub = self.create_subscription(
-            PoseStamped,
-            "/front/target_pose",
-            self.tag_callback,
-            qos_profile_sensor_data,
-        )
+        # State
+        self.local_position: Optional[VehicleLocalPosition] = None
+        self.nav_state: Optional[int] = None
+        self.offboard_active = False
 
-        self.vehicle_status = VehicleStatus()
-        self.vehicle_position = None  # type: ignore[assignment]
-        self.tag_pose = None
-        self.tag_seq = 0
+        self.ref_x = 0.0
+        self.ref_y = 0.0
+        self.ref_z = 0.0
+        self.ref_yaw = 0.0
 
-        self.desired_distance = 3.0  # meters
-        self.k_forward = 0.4
-        self.max_step = 0.5
+        # Targets (x, y, z)
+        self.home_target: Optional[Tuple[float, float, float]] = None
+        self.left_target: Optional[Tuple[float, float, float]] = None
+        self.return_target: Optional[Tuple[float, float, float]] = None
+        self.current_target: Optional[Tuple[float, float, float]] = None
 
-        self.logged_waiting_for_pose = False
-        self.logged_waiting_for_tag = False
+        # Simple state machine
+        self.state = 'WAIT_FOR_POSITION'
+        # States:
+        #   WAIT_FOR_POSITION -> WAIT_FOR_OFFBOARD -> GO_LEFT -> RETURN_HOME -> HOLD
 
-        self.timer = self.create_timer(0.05, self.control_loop)  # 20 Hz
+        # Main control timer (20 Hz)
+        self.control_timer = self.create_timer(0.05, self.control_loop)
 
-    # ------------------------------------------------------------------ callbacks
-
-    def vehicle_status_callback(self, msg: VehicleStatus) -> None:
-        self.vehicle_status = msg
-
-    def vehicle_local_position_callback(self, msg: VehicleLocalPosition) -> None:
-        pos = [msg.x, msg.y, msg.z]
-        if all(math.isfinite(val) for val in pos):
-            self.vehicle_position = pos
-
-    def tag_callback(self, msg: PoseStamped) -> None:
-        self.tag_pose = msg.pose
-        self.tag_seq += 1
-        self.logged_waiting_for_tag = False
         self.get_logger().info(
-            f"Tag #{self.tag_seq} detected: "
-            f"x={msg.pose.position.x:.2f} y={msg.pose.position.y:.2f} z={msg.pose.position.z:.2f}"
+            "LateralStepOffboard node started. "
+            "Take off manually first, then start this node while in the air."
         )
 
-    # ------------------------------------------------------------------ helpers
+    # -------------------------------------------------------------------------
+    # Callbacks
+    # -------------------------------------------------------------------------
 
-    def control_loop(self) -> None:
-        self.publish_offboard_heartbeat()
+    def local_position_callback(self, msg: VehicleLocalPosition):
+        self.local_position = msg
 
-        if not self.is_offboard_active():
-            return
+        # Track the most recent valid pose for pre-offboard holding.
+        if msg.xy_valid and msg.z_valid:
+            if not self.offboard_active:
+                self.current_target = (msg.x, msg.y, msg.z)
+                self.ref_yaw = self._extract_yaw(msg, default=self.ref_yaw)
+                self.state = 'WAIT_FOR_OFFBOARD'
 
-        if self.vehicle_position is None:
-            if not self.logged_waiting_for_pose:
-                self.get_logger().warn(
-                    "Still waiting for /fmu/out/vehicle_local_position"
-                )
-                self.logged_waiting_for_pose = True
-            return
-        self.logged_waiting_for_pose = False
+        if self.offboard_active:
+            self.update_state_machine(msg)
 
-        if self.tag_pose is None:
-            if not self.logged_waiting_for_tag:
-                self.get_logger().info("Waiting for /front/target_pose messages...")
-                self.logged_waiting_for_tag = True
-            self.publish_position_setpoint(self.vehicle_position)
-            return
+    def vehicle_status_callback(self, msg: VehicleStatus):
+        self.nav_state = msg.nav_state
 
-        # Adjust only along the vehicle X axis based on tag range
-        tag_z = self.tag_pose.position.z
-        if not math.isfinite(tag_z):
-            self.get_logger().warn("Tag range invalid; holding position")
-            self.publish_position_setpoint(self.vehicle_position)
-            return
+        offboard_now = self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD
 
-        forward_error = tag_z - self.desired_distance
-        # If tag_z increases, we're farther away. Apply negative gain so we fly forward.
-        delta = self._clamp(-self.k_forward * forward_error, -self.max_step, self.max_step)
+        if offboard_now and not self.offboard_active:
+            self.activate_offboard_sequence()
+        elif self.offboard_active and not offboard_now:
+            self.offboard_active = False
+            self.state = 'WAIT_FOR_OFFBOARD'
+            self.get_logger().info("Exited OFFBOARD; holding current position.")
 
-        desired_position = self.vehicle_position.copy()
-        desired_position[0] += delta  # assume PX4 local X points forward
+    # -------------------------------------------------------------------------
+    # Offboard / command helpers
+    # -------------------------------------------------------------------------
 
-        direction = "forward" if delta > 0 else ("backward" if delta < 0 else "hold")
-        self.get_logger().info(
-            f"Tag distance={tag_z:.2f} m → {direction} step {delta:.2f} m (target {self.desired_distance:.1f} m)"
-        )
-
-        self.publish_position_setpoint(desired_position)
-
-    def is_offboard_active(self) -> bool:
-        return (
-            self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD
-            and self.vehicle_status.arming_state == VehicleStatus.ARMING_STATE_ARMED
-        )
-
-    def publish_offboard_heartbeat(self) -> None:
+    def publish_offboard_control_mode(self):
         msg = OffboardControlMode()
+        msg.timestamp = self.get_clock().now().nanoseconds // 1000  # PX4 expects µs
+
+        # We are using position setpoints only
         msg.position = True
         msg.velocity = False
         msg.acceleration = False
         msg.attitude = False
         msg.body_rate = False
-        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.offboard_mode_pub.publish(msg)
+        msg.thrust_and_torque = False
+        msg.direct_actuator = False
 
-    def publish_position_setpoint(self, position_ned) -> None:
+        self.offboard_control_mode_pub.publish(msg)
+
+    def publish_trajectory_setpoint(self):
         msg = TrajectorySetpoint()
-        msg.position = [float(position_ned[0]), float(position_ned[1]), float(position_ned[2])]
+        msg.timestamp = self.get_clock().now().nanoseconds // 1000  # µs
+
+        if self.current_target is None:
+            # Before we have a target, hold at origin (pilot should not switch yet).
+            x, y, z = 0.0, 0.0, 0.0
+        else:
+            x, y, z = self.current_target
+
+        # PX4 expects NED, z negative when above home
+        msg.position = [float(x), float(y), float(z)]
+        # Unused fields set to NaN so PX4 ignores them
         msg.velocity = [math.nan, math.nan, math.nan]
         msg.acceleration = [math.nan, math.nan, math.nan]
-        msg.yaw = 0.0
+        msg.jerk = [math.nan, math.nan, math.nan]
+
+        msg.yaw = float(self.ref_yaw)
         msg.yawspeed = 0.0
-        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.setpoint_pub.publish(msg)
+
+        self.trajectory_setpoint_pub.publish(msg)
+
+    def send_vehicle_command(
+        self,
+        command: int,
+        param1: float = 0.0,
+        param2: float = 0.0,
+        param3: float = 0.0,
+        param4: float = 0.0,
+        param5: float = 0.0,
+        param6: float = 0.0,
+        param7: float = 0.0,
+    ):
+        """Send a generic VEHICLE_COMMAND to PX4."""
+        msg = VehicleCommand()
+        msg.timestamp = self.get_clock().now().nanoseconds // 1000  # µs
+
+        msg.param1 = float(param1)
+        msg.param2 = float(param2)
+        msg.param3 = float(param3)
+        msg.param4 = float(param4)
+        msg.param5 = float(param5)
+        msg.param6 = float(param6)
+        msg.param7 = float(param7)
+
+        msg.command = int(command)
+        msg.target_system = 1
+        msg.target_component = 1
+        msg.source_system = 1
+        msg.source_component = 1
+        msg.from_external = True
+
+        self.vehicle_command_pub.publish(msg)
+
+    def activate_offboard_sequence(self):
+        """Capture reference at OFFBOARD entry and start lateral step."""
+        if self.local_position is None or not (self.local_position.xy_valid and self.local_position.z_valid):
+            self.get_logger().warn("OFFBOARD requested but local position not valid yet; holding.")
+            return
+
+        self.ref_x = self.local_position.x
+        self.ref_y = self.local_position.y
+        self.ref_z = self.local_position.z
+        self.ref_yaw = self._extract_yaw(self.local_position, default=self.ref_yaw)
+
+        self.home_target = (self.ref_x, self.ref_y, self.ref_z)
+        self.left_target = (self.ref_x, self.ref_y + 1.0, self.ref_z)
+        self.return_target = self.home_target
+
+        self.current_target = self.left_target
+        self.state = 'GO_LEFT'
+        self.offboard_active = True
+
+        self.get_logger().info(
+            f"OFFBOARD engaged at x={self.ref_x:.2f}, y={self.ref_y:.2f}, "
+            f"z={self.ref_z:.2f}, yaw={self.ref_yaw:.2f} rad. State -> GO_LEFT."
+        )
+
+    # -------------------------------------------------------------------------
+    # State machine for left/right motion
+    # -------------------------------------------------------------------------
+
+    def update_state_machine(self, pos: VehicleLocalPosition):
+        if self.state == 'GO_LEFT' and self.left_target is not None:
+            if self.is_close_to_target(self.left_target, pos):
+                self.state = 'RETURN_HOME'
+                self.current_target = self.return_target
+                self.get_logger().info(
+                    "Reached left target. State -> RETURN_HOME (commanding -1 m in local Y)."
+                )
+
+        elif self.state == 'RETURN_HOME' and self.return_target is not None:
+            if self.is_close_to_target(self.return_target, pos):
+                self.state = 'HOLD'
+                # Keep holding at start point
+                self.current_target = self.return_target
+                self.get_logger().info("Returned to start point. State -> HOLD.")
+
+        # In HOLD, we just keep sending the same target; pilot can switch modes
+        # or land manually.
+
+    @staticmethod
+    def is_close_to_target(target: Tuple[float, float, float],
+                           pos: VehicleLocalPosition,
+                           tol: float = 0.15) -> bool:
+        """Check if |pos - target| < tol in XY and Z."""
+        dx = pos.x - target[0]
+        dy = pos.y - target[1]
+        dz = pos.z - target[2]
+        dist_xy = math.hypot(dx, dy)
+        return dist_xy < tol and abs(dz) < tol
+
+    # -------------------------------------------------------------------------
+    # Main control loop
+    # -------------------------------------------------------------------------
+
+    def control_loop(self):
+        # Keep holding the most recent valid position until OFFBOARD is active.
+        if not self.offboard_active and self.local_position and self.local_position.xy_valid and self.local_position.z_valid:
+            self.current_target = (self.local_position.x, self.local_position.y, self.local_position.z)
+
+        # Always publish OffboardControlMode and TrajectorySetpoint at high rate
+        self.publish_offboard_control_mode()
+        self.publish_trajectory_setpoint()
+
+    @staticmethod
+    def _extract_yaw(pos: VehicleLocalPosition, default: float) -> float:
+        """Return yaw if valid; otherwise, keep last yaw."""
+        try:
+            if hasattr(pos, 'heading_good_for_control') and not pos.heading_good_for_control:
+                return default
+        except Exception:
+            pass
+        return float(pos.heading)
 
 
-def main(args=None) -> None:
+def main(args=None):
     rclpy.init(args=args)
-    node = CodexTestNode()
+    node = LateralStepOffboard()
     try:
         rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info("Shutting down LateralStepOffboard.")
     finally:
         node.destroy_node()
         rclpy.shutdown()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

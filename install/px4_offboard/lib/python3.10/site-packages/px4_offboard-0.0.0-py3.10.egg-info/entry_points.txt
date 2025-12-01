@@ -5,4 +5,6 @@ control = px4_offboard.control:main
 offboard_control = px4_offboard.offboard_control:main
 offboard_figure8 = px4_offboard.offboard_figure8_node:main
 offboard_ship_land = px4_offboard.offboard_ship_land:main
+offboard_ship_land_sim = px4_offboard.offboard_ship_land_sim:main
+offboard_test = px4_offboard.offboard_test:main
 velocity_control = px4_offboard.velocity_control:main

@@ -36,7 +36,7 @@ class OffboardShipLandNode(Node):
         
         self.tag_subscriber = self.create_subscription(
             PoseStamped,
-            '/front/target_pose',        
+            '/target_pose',        
             self.tag_pose_callback,
             qos_profile_sensor_data
         )
@@ -180,7 +180,7 @@ class OffboardShipLandNode(Node):
         msg = TrajectorySetpoint()
         msg.position = [x, y, z]
         # msg.yaw = (45.0) * math.pi / 180.0;
-        msg.yaw = (90.0) * math.pi / 180.0;
+        msg.yaw = 0.0
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
 
@@ -189,7 +189,7 @@ class OffboardShipLandNode(Node):
         msg = TrajectorySetpoint()
         msg.position = [curr_x, curr_y - 4.0 / self.rate, self.altitude]
         # print(msg.position)
-        msg.yaw = (90.0) * math.pi / 180.0;
+        msg.yaw = 0.0
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
 
@@ -198,7 +198,7 @@ class OffboardShipLandNode(Node):
         msg = TrajectorySetpoint()
         msg.position = [curr_x, curr_y + 4.0 / self.rate, self.altitude]
         # print(msg.position)
-        msg.yaw = (90.0) * math.pi / 180.0;
+        msg.yaw = 0.0
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
 
@@ -211,7 +211,7 @@ class OffboardShipLandNode(Node):
         msg = TrajectorySetpoint()
         msg.position = [curr_x + 6.0 / self.rate, curr_y + adjustment / self.rate, self.altitude]
         print(msg.position)
-        msg.yaw = (90.0) * math.pi / 180.0;
+        msg.yaw = 0.0
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
     
@@ -219,7 +219,7 @@ class OffboardShipLandNode(Node):
         msg = TrajectorySetpoint()
         msg.position = [x, y, self.altitude]
         print(msg.position)
-        msg.yaw = (90.0) * math.pi / 180.0;
+        msg.yaw = 0.0
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
 

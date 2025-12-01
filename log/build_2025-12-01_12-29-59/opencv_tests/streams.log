@@ -1,0 +1,44 @@
+[0.379s] Invoking command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/image_geometry LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data
+[0.484s] /home/jacob/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.484s]   warnings.warn(msg)
+[0.501s] /home/jacob/.local/lib/python3.10/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.501s] !!
+[0.501s] 
+[0.502s]         ********************************************************************************
+[0.502s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.502s] 
+[0.502s]         License :: OSI Approved :: Apache Software License
+[0.502s] 
+[0.502s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.502s]         ********************************************************************************
+[0.502s] 
+[0.502s] !!
+[0.502s]   self._finalize_license_expression()
+[0.543s] running egg_info
+[0.593s] writing ../../../build/opencv_tests/opencv_tests.egg-info/PKG-INFO
+[0.598s] writing dependency_links to ../../../build/opencv_tests/opencv_tests.egg-info/dependency_links.txt
+[0.598s] writing entry points to ../../../build/opencv_tests/opencv_tests.egg-info/entry_points.txt
+[0.598s] writing requirements to ../../../build/opencv_tests/opencv_tests.egg-info/requires.txt
+[0.599s] writing top-level names to ../../../build/opencv_tests/opencv_tests.egg-info/top_level.txt
+[0.736s] reading manifest file '../../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[0.741s] writing manifest file '../../../build/opencv_tests/opencv_tests.egg-info/SOURCES.txt'
+[0.742s] running build
+[0.742s] running build_py
+[0.743s] copying opencv_tests/rosfacedetect.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.744s] copying opencv_tests/broadcast.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.745s] copying opencv_tests/__init__.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.745s] copying opencv_tests/source.py -> /home/jacob/offb/offboard_ladder/build/opencv_tests/build/lib/opencv_tests
+[0.746s] running install
+[0.757s] running install_lib
+[0.809s] running install_data
+[0.813s] copying resource/opencv_tests -> /home/jacob/offb/offboard_ladder/install/opencv_tests/share/ament_index/resource_index/packages
+[0.813s] copying package.xml -> /home/jacob/offb/offboard_ladder/install/opencv_tests/share/opencv_tests
+[0.815s] running install_egg_info
+[0.846s] removing '/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests-4.1.0-py3.10.egg-info' (and everything under it)
+[0.846s] Copying ../../../build/opencv_tests/opencv_tests.egg-info to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages/opencv_tests-4.1.0-py3.10.egg-info
+[0.846s] running install_scripts
+[0.846s] Installing broadcast script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.846s] Installing rosfacedetect script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.846s] Installing source script to /home/jacob/offb/offboard_ladder/install/opencv_tests/lib/opencv_tests
+[0.847s] writing list of installed files to '/home/jacob/offb/offboard_ladder/build/opencv_tests/install.log'
+[0.848s] Invoked command in '/home/jacob/offb/offboard_ladder/src/vision_opencv/opencv_tests' returned '0': CMAKE_PREFIX_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge:/home/jacob/offb/offboard_ladder/install/vision_opencv:/home/jacob/offb/offboard_ladder/install/px4_ros_com:/home/jacob/offb/offboard_ladder/install/aruco_tracker:/home/jacob/offb/offboard_ladder/install/px4_msgs:/home/jacob/offb/offboard_ladder/install/image_geometry LD_LIBRARY_PATH=/home/jacob/offb/offboard_ladder/install/cv_bridge/lib:/home/jacob/offb/offboard_ladder/install/px4_ros_com/lib:/home/jacob/offb/offboard_ladder/install/px4_msgs/lib:/home/jacob/offb/offboard_ladder/install/image_geometry/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jacob/offb/offboard_ladder/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jacob/offb/offboard_ladder/install/opencv_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/opencv_tests build --build-base /home/jacob/offb/offboard_ladder/build/opencv_tests/build install --record /home/jacob/offb/offboard_ladder/build/opencv_tests/install.log --single-version-externally-managed install_data
