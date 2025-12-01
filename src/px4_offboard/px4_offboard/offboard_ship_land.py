@@ -234,17 +234,6 @@ class OffboardShipLandNode(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
 
-    def publish_offboard_control_heartbeat_signal_velocity(self):
-        """Publish the offboard control mode."""
-        msg = OffboardControlMode()
-        msg.position = False
-        msg.velocity = True
-        msg.acceleration = False
-        msg.attitude = False
-        msg.body_rate = False
-        msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-        self.offboard_control_mode_publisher.publish(msg)
-
     def publish_vehicle_command(self, command, **params) -> None:
         """Publish a vehicle command."""
         msg = VehicleCommand()

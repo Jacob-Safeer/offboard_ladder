@@ -12,10 +12,10 @@ launch/velocity_control.launch.py
 px4_offboard/__init__.py
 px4_offboard/circle_offboard_mode.py
 px4_offboard/control.py
+px4_offboard/land_test.py
 px4_offboard/offboard_control.py
 px4_offboard/offboard_figure8_node.py
 px4_offboard/offboard_ship_land.py
 px4_offboard/offboard_ship_land_sim.py
 px4_offboard/offboard_test.py
-px4_offboard/velocity_control.py
 resource/px4_offboard

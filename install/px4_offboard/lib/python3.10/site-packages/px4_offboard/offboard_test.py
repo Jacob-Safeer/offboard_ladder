@@ -1,48 +1,19 @@
 #!/usr/bin/env python3
 
-############################################################################
-#
-#   Copyright (C) 2022 PX4 Development Team. All rights reserved.
-#
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions
-# are met:
-#
-# 1. Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer.
-# 2. Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in
-#    the documentation and/or other materials provided with the
-#    distribution.
-# 3. Neither the name PX4 nor the names of its contributors may be
-#    used to endorse or promote products derived from this software
-#    without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
-# OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
-# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-# POSSIBILITY OF SUCH DAMAGE.
-#
-############################################################################
-
 import math
 from typing import Optional
 
 import numpy as np
 import rclpy
-from px4_msgs.msg import (OffboardControlMode, TrajectorySetpoint,
-                          VehicleLocalPosition, VehicleStatus)
+from px4_msgs.msg import (
+    OffboardControlMode,
+    TrajectorySetpoint,
+    VehicleLocalPosition,
+    VehicleStatus,
+    VehicleAttitude
+)
 from rclpy.node import Node
-from rclpy.qos import (DurabilityPolicy, HistoryPolicy, QoSProfile,
-                       ReliabilityPolicy)
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
 
 
 class OffboardTest(Node):
@@ -52,7 +23,7 @@ class OffboardTest(Node):
 
         self.get_logger().info("Offboard Test Node Alive!")
 
-        # Configure QoS profile for publishing and subscribing
+        # QoS profile
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
@@ -60,11 +31,13 @@ class OffboardTest(Node):
             depth=1
         )
 
+        # Subscriptions
         self.status_sub = self.create_subscription(
             VehicleStatus,
             'fmu/out/vehicle_status',
             self.vehicle_status_callback,
             qos_profile)
+
         self.status_sub_v1 = self.create_subscription(
             VehicleStatus,
             'fmu/out/vehicle_status_v1',
@@ -77,43 +50,77 @@ class OffboardTest(Node):
             self.vehicle_local_position_callback,
             qos_profile)
 
+        # NEW: attitude subscription (for yaw)
+        self.attitude_sub = self.create_subscription(
+            VehicleAttitude,
+            'fmu/out/vehicle_attitude',
+            self.vehicle_attitude_callback,
+            qos_profile)
+
+        # Publishers
         self.publisher_offboard_mode = self.create_publisher(
             OffboardControlMode,
             'fmu/in/offboard_control_mode',
             qos_profile)
+
         self.publisher_trajectory = self.create_publisher(
             TrajectorySetpoint,
             'fmu/in/trajectory_setpoint',
             qos_profile)
 
-        timer_period = 0.02  # seconds
+        # Timer loop
+        timer_period = 0.02
         self.timer = self.create_timer(timer_period, self.cmdloop_callback)
         self.dt = timer_period
 
-        self.declare_parameter('lateral_amplitude', 1.0)  # meters
-        self.declare_parameter('lateral_rate', 0.3)  # rad/s for slow oscillation
+        # Parameters
+        self.declare_parameter('lateral_amplitude', 1.0)
+        self.declare_parameter('lateral_rate', 0.3)
         self.declare_parameter('lock_to_current_position', True)
 
-        self.nav_state = VehicleStatus.NAVIGATION_STATE_MAX
-        self.arming_state = VehicleStatus.ARMING_STATE_DISARMED
-
-        self.theta = 0.0
         self.amplitude = float(self.get_parameter('lateral_amplitude').value)
         self.angular_rate = float(self.get_parameter('lateral_rate').value)
         self.lock_center = bool(self.get_parameter('lock_to_current_position').value)
 
+        # Internal state
+        self.nav_state = VehicleStatus.NAVIGATION_STATE_MAX
+        self.arming_state = VehicleStatus.ARMING_STATE_DISARMED
+
+        self.theta = 0.0
+
         self.have_local_position = False
         self.local_position = np.zeros(3)
+
+        # NEW: store yaw from attitude
+        self.yaw = None
+
+        # Start position (motion center)
         self.start_position: Optional[np.ndarray] = None if self.lock_center else np.zeros(3)
 
+    # ---------------------------------------------------------------------
+    # CALLBACKS
+    # ---------------------------------------------------------------------
+
     def vehicle_status_callback(self, msg: VehicleStatus) -> None:
-        # TODO: handle NED->ENU transformation if needed
         self.nav_state = msg.nav_state
         self.arming_state = msg.arming_state
 
     def vehicle_local_position_callback(self, msg: VehicleLocalPosition) -> None:
         self.local_position = np.array([msg.x, msg.y, msg.z], dtype=float)
         self.have_local_position = True
+
+    def vehicle_attitude_callback(self, msg: VehicleAttitude):
+        # Quaternion → Yaw (ENU convention)
+        q = msg.q  # array of [w, x, y, z]
+        w, x, y, z = q[0], q[1], q[2], q[3]
+
+        # yaw = atan2(2(wx + yz), w² + x² - y² - z²)
+        self.yaw = math.atan2(2.0 * (w*z + x*y),
+                              1.0 - 2.0 * (y*y + z*z))
+
+    # ---------------------------------------------------------------------
+    # START POSITION LOCK
+    # ---------------------------------------------------------------------
 
     def lock_start_position(self) -> None:
         if self.start_position is not None:
@@ -124,16 +131,24 @@ class OffboardTest(Node):
             return
 
         if not self.have_local_position:
-            self.get_logger().warn('Waiting for local position to lock start position...',
-                                   throttle_duration_sec=2.0)
+            self.get_logger().warn(
+                'Waiting for local position to lock start position...',
+                throttle_duration_sec=2.0)
             return
 
         self.start_position = self.local_position.copy()
         self.get_logger().info(
             f"Start position locked at ({self.start_position[0]:.1f}, "
-            f"{self.start_position[1]:.1f}, {self.start_position[2]:.1f})")
+            f"{self.start_position[1]:.1f}, {self.start_position[2]:.1f})"
+        )
+
+    # ---------------------------------------------------------------------
+    # MAIN LOOP
+    # ---------------------------------------------------------------------
 
     def cmdloop_callback(self) -> None:
+
+        # Always publish offboard control mode
         offboard_msg = OffboardControlMode()
         offboard_msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         offboard_msg.position = True
@@ -141,6 +156,7 @@ class OffboardTest(Node):
         offboard_msg.acceleration = False
         self.publisher_offboard_mode.publish(offboard_msg)
 
+        # Only run offboard logic when armed + in offboard
         if (self.nav_state != VehicleStatus.NAVIGATION_STATE_OFFBOARD or
                 self.arming_state != VehicleStatus.ARMING_STATE_ARMED):
             return
@@ -149,34 +165,50 @@ class OffboardTest(Node):
         if self.start_position is None:
             return
 
-        # Slowly oscillate 1 m left/right relative to the start position (Y axis).
-        lateral_offset = self.amplitude * math.sin(self.theta)
-        x = self.start_position[0]
-        y = self.start_position[1] + lateral_offset
+        # Need yaw to compute body-relative movement
+        if self.yaw is None:
+            self.get_logger().warn("Waiting for yaw...", throttle_duration_sec=2.0)
+            return
+
+        # -----------------------------------------------------------------
+        # BODY-FRAME SIDE-TO-SIDE MOTION
+        # -----------------------------------------------------------------
+
+        # Lateral motion in BODY coordinate system
+        lateral_offset_body = self.amplitude * math.sin(self.theta)
+
+        # Convert body → world for a pure lateral motion
+        x_offset = -lateral_offset_body * math.sin(self.yaw)
+        y_offset =  lateral_offset_body * math.cos(self.yaw)
+
+        # Final world position setpoint
+        x = self.start_position[0] + x_offset
+        y = self.start_position[1] + y_offset
         z = self.start_position[2]
 
+        # Publish setpoint
         trajectory_msg = TrajectorySetpoint()
         trajectory_msg.timestamp = offboard_msg.timestamp
         trajectory_msg.position[0] = float(x)
         trajectory_msg.position[1] = float(y)
         trajectory_msg.position[2] = float(z)
-        trajectory_msg.velocity[0] = float('nan')
-        trajectory_msg.velocity[1] = float('nan')
-        trajectory_msg.velocity[2] = float('nan')
+        trajectory_msg.velocity[:] = [float('nan')] * 3
         trajectory_msg.yaw = float('nan')
         trajectory_msg.yawspeed = float('nan')
         self.publisher_trajectory.publish(trajectory_msg)
 
+        # Update phase
         self.theta += self.angular_rate * self.dt
 
 
+# ------------------------------------------------------------------------------
+# MAIN
+# ------------------------------------------------------------------------------
+
 def main(args=None) -> None:
     rclpy.init(args=args)
-
     offboard_test = OffboardTest()
-
     rclpy.spin(offboard_test)
-
     offboard_test.destroy_node()
     rclpy.shutdown()
 
